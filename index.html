@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app>
+  <head>
+    <meta charset="utf-8">
+    <title>{{greeting}} {{first_name}}!</title>
+    <!-- bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/yeti/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <div class="container-fluid">
+    <h1>Greetings, Angular! Here's a Form.</h1>
+    <hr>
+    <form role="form" ng-submit="login()">
+      <fieldset>
+        <div class="form-group">
+          <label>Greeting</label>
+          <input ng-model="greeting" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+          <label>First Name</label>
+          <input type="text" ng-model="first_name" class="form-control">
+        </div>
+        <div class="form-group">
+          <label>Last Name</label>
+          <input type="text" ng-model="last_name" class="form-control">
+        </div>
+        <div class="form-group">
+          <label>Show Yo'self Here!</label>
+          <input type="text" ng-model="image" class="form-control">
+        </div>
+      </fieldset>
+    </form>
+    <hr>
+    <h2 ng-init="greeting" class="text-center">{{greeting}} {{first_name}} {{last_name}} </h2>
+    <div ng-if="image" class="image text-center">
+      <img src="{{image}}">
+    </div>
+    </div>
+    <!-- javascript -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+  </body>
+</html>
